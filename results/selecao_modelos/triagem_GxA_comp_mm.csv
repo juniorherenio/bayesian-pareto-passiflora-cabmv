@@ -1,0 +1,7 @@
+"modelo","tipo_G","tipo_R","DIC","dDIC","ESS_min","n_params","tempo_seg","conv"
+"G_us_R_idh","us","idh",1356.7,0,128,32,829,TRUE
+"G_idh_R_idh","idh","idh",1360.6,3.9,671,12,78,TRUE
+"G_hom_R_idh","hom","idh",1378.4,21.7,51,8,15,TRUE
+"G_idh_R_hom","idh","hom",1405.5,48.8,671,8,76,TRUE
+"G_us_R_hom","us","hom",1406.4,49.7,229,28,765,TRUE
+"G_hom_R_hom","hom","hom",1411.7,55,40,4,14,TRUE

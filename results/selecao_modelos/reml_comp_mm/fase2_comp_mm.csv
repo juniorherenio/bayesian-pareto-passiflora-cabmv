@@ -1,0 +1,6 @@
+"modelo","n_par","logL","AIC","ASVR_pct","converged","valido","dAIC"
+"M2 individuo",3,-522.1964,1050.3929,NA,TRUE,TRUE,0
+"M_FA1",12,-521.1199,1066.2399,"21.33",TRUE,TRUE,15.847
+"M_FA2 (inválido)",17,-520.3489,1062.698,"100%*",TRUE,FALSE,12.3051
+"M_UN (n.conv.)",15,NA,NA,NA,FALSE,FALSE,NA
+"M_FA3 (n.conv.)",22,-520.5752,NA,NA,FALSE,FALSE,NA

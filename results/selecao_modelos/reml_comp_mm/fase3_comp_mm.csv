@@ -1,0 +1,5 @@
+"modelo","residual","n_par","logL","AIC","status"
+"M2 homogêneo","~ units",3,-522.1964,1050.3929,"✓ selecionado"
+"M2_het heterogêneo","~ dsum(~ units | estacao_ano)",7,-518.8435,1051.6869,"LRT p=0.152, AIC pior"
+"AR1 espacial","~ ar1(col):ar1(lin)",NA,NA,NA,"NAs em linha/coluna — inaplicável"
+"spl2D","random + spl2D(lin,col)",NA,NA,NA,"spl2D não disponível"
