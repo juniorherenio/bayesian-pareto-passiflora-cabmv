@@ -1,0 +1,8 @@
+"par","trait1","trait2","rg","rg_025","rg_975","P_pos","ESS","interpretacao"
+"comp_diam","comp_mm","diam_mm",0.52,-0.228,0.9,0.932,1000,"positiva moderada"
+"comp_massa","comp_mm","massa_fruto_g",0.401,-0.162,0.785,0.931,1000,"positiva moderada"
+"casca_rend","esp_casca_mm","rend_polpa_pct",-0.221,-0.667,0.368,0.229,1000,"negativa fraca"
+"casca_polpa","esp_casca_mm","massa_polpa_g",-0.059,-0.477,0.394,0.416,1000,"quase nula"
+"massa_rend","massa_fruto_g","rend_polpa_pct",0.011,-0.519,0.544,0.508,1000,"quase nula"
+"brix_rend","sst_brix","rend_polpa_pct",0.051,-0.449,0.552,0.571,1000,"quase nula"
+"brix_casca","sst_brix","esp_casca_mm",0.03,-0.593,0.655,0.518,1000,"quase nula"

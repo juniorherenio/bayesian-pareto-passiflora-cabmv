@@ -1,0 +1,4 @@
+"cluster","n","IR_com_medio","IR_res_medio","IR_final_medio","P_severo_medio","P_pareto_medio","entropia_medio"
+1,50,0.291,0.494,0.664,0.048,0.141,0
+2,20,-0.023,-1.427,-0.633,0.117,0.057,0
+3,25,-0.493,0.152,-0.821,0.057,0.046,0
