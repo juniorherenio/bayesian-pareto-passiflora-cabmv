@@ -292,7 +292,7 @@ To reproduce all analyses:
 
 If you use this code or data, please cite:
 
-> Gonçalves Júnior, D.H., Viana, A.P., Cerri, R. (2026). Bayesian multi-trait selection with uncertainty-aware Pareto ranking under genotype × season interaction and CABMV pressure in passion fruit hybrids. *Scientific Reports*. [DOI pending]
+> Gonçalves Júnior, D.H., Albuquerque, D.P., Viana, A.P., Cerri, R. (2026). Bayesian multi-trait selection with uncertainty-aware Pareto ranking under genotype × season interaction and CABMV pressure in passion fruit hybrids. *Scientific Reports*. [DOI pending]
 
 ---
 
