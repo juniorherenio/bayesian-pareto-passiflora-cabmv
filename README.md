@@ -1,6 +1,6 @@
 # Bayesian multi-trait selection with uncertainty-aware Pareto ranking under genotype × season interaction and CABMV pressure in passion fruit (*Passiflora* spp.)
 
-[![DOI]([https://doi.org/10.5281/zenodo.XXXXXXX](https://doi.org/10.5281/zenodo.20328435))
+[![DOI](https://zenodo.org/badge/DOI/10.5281/zenodo.20328435.svg)](https://doi.org/10.5281/zenodo.20328435)
 
 > **Gonçalves Júnior, D.H., Albuquerque, D.P., Viana, A.P., Cerri, R.** (2026). Bayesian multi-trait selection with uncertainty-aware Pareto ranking under genotype × season interaction and CABMV pressure in passion fruit hybrids. *Scientific Reports*. [DOI pending]
 
@@ -25,17 +25,19 @@ The framework is designed to be transferable to other pathosystem × crop combin
 ```
 bayesian-pareto-passiflora-cabmv/
 ├── data/
-│   ├── raw/
-│   │   └── dataset_completo.csv          # Full phenotypic dataset with repeated measures
-│   ├── processed/
-│   │   ├── pom_indices.csv               # POM-derived individual disease pressure indices
-│   │   ├── aacpd_tres_versoes.csv        # Three AUDPC versions per individual × harvest date
-│   │   ├── bdsip_parametros.csv          # Raw BDSIP parameters (8 per individual)
-│   │   └── bdsip_completo.csv            # BDSIP parameters + standardised scores + composite index
-│   └── results/
-│       ├── params_GxA_POM.csv            # Bayesian univariate model parameters (7 traits)
-│       ├── h2_estacao_GxA_POM.csv        # Narrow-sense heritability by trait × season
-│       ├── rg_bivariado.csv              # Genetic correlations from bivariate models
+│   └── processed/
+│       ├── dataset_completo.csv          # Full phenotypic dataset with repeated measures
+│       ├── pom_indices.csv               # POM-derived individual disease pressure indices
+│       ├── aacpd_tres_versoes.csv        # Three AUDPC versions per individual × harvest date
+│       ├── bdsip_parametros.csv          # Raw BDSIP parameters (8 per individual)
+│       └── bdsip_completo.csv            # BDSIP parameters + standardised scores + composite index
+├── results/
+│   ├── genetic_parameters/
+│   │   └── bayesian/
+│   │       ├── params_GxA_POM.csv        # Bayesian univariate model parameters (7 traits)
+│   │       ├── h2_estacao_GxA_POM.csv    # Narrow-sense heritability by trait × season
+│   │       └── rg_bivariado.csv          # Genetic correlations from bivariate models
+│   └── selection/
 │       ├── ranking_genitores.csv         # Resilience index and ranking (95 individuals)
 │       ├── pareto_bayesiano.csv          # Bayesian Pareto frontier results
 │       ├── genitores_recomendados.csv    # Recommended parents (consensus Pareto)
@@ -54,6 +56,7 @@ bayesian-pareto-passiflora-cabmv/
 │   ├── 09_pareto_frontier.R              # Point-estimate and Bayesian Pareto frontier (NSGA-II)
 │   ├── 10_umap_gmm_clustering.R          # UMAP dimensionality reduction + GMM clustering
 │   └── 11_figures.R                      # All manuscript figures
+├── LICENSE
 └── README.md
 ```
 
@@ -61,7 +64,7 @@ bayesian-pareto-passiflora-cabmv/
 
 ## Data description
 
-### `data/raw/dataset_completo.csv`
+### `data/processed/dataset_completo.csv`
 Full phenotypic dataset. Each row is one individual × harvest date observation (203 observations, 95 individuals, repeated-measures structure).
 
 | Column | Description | Unit |
@@ -149,7 +152,7 @@ Includes all columns from `bdsip_parametros.csv` plus standardised versions (suf
 
 ---
 
-### `data/results/params_GxA_POM.csv`
+### `results/genetic_parameters/bayesian/params_GxA_POM.csv`
 Bayesian univariate model parameters for the 7 evaluated traits.
 
 | Column | Description |
@@ -163,7 +166,7 @@ Bayesian univariate model parameters for the 7 evaluated traits.
 
 ---
 
-### `data/results/h2_estacao_GxA_POM.csv`
+### `results/genetic_parameters/bayesian/h2_estacao_GxA_POM.csv`
 Narrow-sense heritability by trait × season-year.
 
 | Column | Description |
@@ -176,7 +179,7 @@ Narrow-sense heritability by trait × season-year.
 
 ---
 
-### `data/results/rg_bivariado.csv`
+### `results/genetic_parameters/bayesian/rg_bivariado.csv`
 Genetic correlations from bivariate Bayesian models (7 trait pairs).
 
 | Column | Description |
@@ -193,7 +196,7 @@ Genetic correlations from bivariate Bayesian models (7 trait pairs).
 
 ---
 
-### `data/results/ranking_genitores.csv`
+### `results/selection/ranking_genitores.csv`
 Resilience index components and final ranking for all 95 individuals.
 
 | Column | Description |
@@ -214,7 +217,7 @@ Resilience index components and final ranking for all 95 individuals.
 
 ---
 
-### `data/results/pareto_bayesiano.csv`
+### `results/selection/pareto_bayesiano.csv`
 Bayesian Pareto frontier results (86 individuals with POM data).
 
 | Column | Description |
@@ -232,7 +235,7 @@ Bayesian Pareto frontier results (86 individuals with POM data).
 
 ---
 
-### `data/results/clusters_genitores.csv`
+### `results/selection/clusters_genitores.csv`
 GMM cluster assignments with UMAP coordinates for all 95 individuals.
 
 | Column | Description |
@@ -276,7 +279,7 @@ To reproduce all analyses:
 1. Clone this repository
 2. Open `scripts/00_setup.R` and install required packages
 3. Run scripts in numerical order (01 through 11)
-4. All intermediate outputs are saved to `data/processed/` and `data/results/`
+4. All intermediate outputs are saved to `data/processed/` and `results/`
 5. Figures are saved by `scripts/11_figures.R`
 
 ---
@@ -284,7 +287,7 @@ To reproduce all analyses:
 ## License
 
 - **Code** (`/scripts`): [MIT License](LICENSE)
-- **Data** (`/data`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
+- **Data** (`/data`, `/results`): [Creative Commons Attribution 4.0 International (CC BY 4.0)](https://creativecommons.org/licenses/by/4.0/)
 
 ---
 
@@ -300,4 +303,4 @@ If you use this code or data, please cite:
 
 Deurimar Herênio Gonçalves Júnior  
 Postdoctoral Researcher — Universidade Federal do Espírito Santo (UFES)  
-[your email here]
+juniorherenio@gmail.com
